@@ -7,13 +7,13 @@ const Task = ({ task, onDelete, onToggle }) => {
       onDoubleClick={() => onToggle(task.id)}
     >
       <h3>
-        {task.message}{" "}
+        {task.text}{" "}
         <FaTimes
           style={{ color: "darkred", cursor: "pointer" }}
           onClick={() => onDelete(task.id)}
         />
       </h3>
-      <p>{task.time}</p>
+      <p>{task.day}</p>
     </div>
   );
 };
