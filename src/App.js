@@ -8,19 +8,19 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      text: "Hi my friend",
+      text: "Task to do number 1",
       day: "Monday 11 November",
       reminder: true,
     },
     {
       id: 2,
-      text: "Hi my friend dldldjjdj",
+      text: "You can add new task just press the button",
       day: "Monday 14 November",
       reminder: true,
     },
     {
       id: 3,
-      text: "Hi my friend bxbxvxvx",
+      text: "Double click to highlight the task",
       day: "Monday 15 November",
       reminder: true,
     },
@@ -46,7 +46,10 @@ function App() {
 
   return (
     <div className="container">
-      <Header onShow={()=>setShowAddForm(!showAddForm)} showAdd={showAddForm} />
+      <Header
+        onShow={() => setShowAddForm(!showAddForm)}
+        showAdd={showAddForm}
+      />
 
       {showAddForm && <AddTask onAdd={addTask} />}
 
